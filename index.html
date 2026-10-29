@@ -7,51 +7,274 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <main class="page">
-    <span class="page-number page-number--left" aria-hidden="true">06</span>
-    <span class="page-number page-number--right" aria-hidden="true">07</span>
+  <main class="app">
+    <input class="screen-choice" type="radio" name="screen" id="screen-player" checked>
+    <input class="screen-choice" type="radio" name="screen" id="screen-library">
+    <input class="screen-choice" type="radio" name="screen" id="screen-playlists">
+    <input class="screen-choice" type="radio" name="screen" id="screen-account">
 
-    <section class="player" aria-label="Reproductor de musica">
-      <div class="record" aria-hidden="true">
-        <div class="record-label"><span></span></div>
+    <input class="track-choice" type="radio" name="track" id="sweater-weather" checked>
+    <input class="track-choice" type="radio" name="track" id="billie-jean">
+    <input class="track-choice" type="radio" name="track" id="smooth-criminal">
+    <input class="track-choice" type="radio" name="track" id="black-or-white">
+
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="Inicio del reproductor">
+        <span class="brand-mark"></span>
+        <span>SONORA</span>
+      </a>
+
+      <p class="menu-label">MENU</p>
+      <nav class="side-navigation" aria-label="Secciones">
+        <label class="navigation-link" for="screen-player">
+          <span class="navigation-number">01</span>
+          <span>Reproductor</span>
+        </label>
+        <label class="navigation-link" for="screen-library">
+          <span class="navigation-number">02</span>
+          <span>Biblioteca</span>
+        </label>
+        <label class="navigation-link" for="screen-playlists">
+          <span class="navigation-number">03</span>
+          <span>Listas</span>
+        </label>
+        <label class="navigation-link" for="screen-account">
+          <span class="navigation-number">04</span>
+          <span>Mi cuenta</span>
+        </label>
+      </nav>
+
+      <div class="sidebar-profile">
+        <span class="profile-avatar">I</span>
+        <span><strong>Invitado</strong><small>Sin iniciar sesion</small></span>
       </div>
 
-      <div class="player-body">
-        <p class="now-playing">
-          <span class="equalizer" aria-hidden="true">
-            <i></i><i></i><i></i><i></i>
-          </span>
-          <span>NOW SPINNING</span>
-        </p>
-
-        <div class="track">
-          <h1>Nombre de la cancion</h1>
-          <p class="track-info">Artista album Año</p>
-        </div>
-
-        <div class="timeline" aria-label="Progreso de reproduccion">
-          <div class="progress" aria-hidden="true">
-            <span class="progress-knob"></span>
-          </div>
-          <div class="times">
-            <span>0:00</span>
-            <span>0:00</span>
-          </div>
-        </div>
-
-        <div class="controls" role="group" aria-label="Controles del reproductor">
-          <button class="skip" type="button" aria-label="Cancion anterior">
-            <span class="previous-icon" aria-hidden="true"></span>
-          </button>
-          <button class="play" type="button" aria-label="Reproducir">
-            <span class="play-icon" aria-hidden="true"></span>
-          </button>
-          <button class="skip" type="button" aria-label="Cancion siguiente">
-            <span class="next-icon" aria-hidden="true"></span>
-          </button>
-        </div>
+      <div class="sidebar-footer">
+        <span class="footer-dot"></span>
+        <span>MUSICA LOCAL</span>
       </div>
-    </section>
+    </aside>
+
+    <div class="content">
+      <section class="screen player-screen" aria-label="Reproductor">
+        <div class="screen-heading">
+          <p class="eyebrow">TU ESPACIO MUSICAL</p>
+          <h1>Reproductor</h1>
+        </div>
+
+        <section class="player" aria-label="Reproductor de musica">
+          <div class="record" aria-hidden="true">
+            <div class="album-cover cover-love-you"></div>
+            <div class="album-cover cover-thriller"></div>
+            <div class="album-cover cover-bad"></div>
+            <div class="album-cover cover-dangerous"></div>
+            <div class="record-label"><span></span></div>
+          </div>
+
+          <div class="player-body">
+            <p class="now-playing">
+              <span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span>SELECCION ACTUAL</span>
+            </p>
+
+            <div class="track-info">
+              <div class="track-details details-sweater-weather">
+                <h2>Sweater Weather</h2>
+                <p>The Neighbourhood , I Love You , 2013</p>
+              </div>
+              <div class="track-details details-billie-jean">
+                <h2>Billie Jean</h2>
+                <p>Michael Jackson , Thriller , 1982</p>
+              </div>
+              <div class="track-details details-smooth-criminal">
+                <h2>Smooth Criminal</h2>
+                <p>Michael Jackson , Bad , 1987</p>
+              </div>
+              <div class="track-details details-black-or-white">
+                <h2>Black or White</h2>
+                <p>Michael Jackson , Dangerous , 1991</p>
+              </div>
+            </div>
+
+            <div class="timeline" aria-label="Progreso de reproduccion">
+              <div class="progress"><span class="progress-knob"></span></div>
+              <div class="times"><span>0:00</span><span>0:00</span></div>
+            </div>
+
+            <div class="controls" aria-label="Controles visuales">
+              <button class="skip" type="button" aria-label="Cancion anterior" disabled>
+                <span class="previous-icon" aria-hidden="true"></span>
+              </button>
+              <button class="play" type="button" aria-label="Reproducir" disabled>
+                <span class="play-icon" aria-hidden="true"></span>
+              </button>
+              <button class="skip" type="button" aria-label="Cancion siguiente" disabled>
+                <span class="next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <label class="library-link" for="screen-library">Explorar biblioteca <span aria-hidden="true"></span></label>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen library-screen" aria-label="Biblioteca de canciones">
+        <div class="screen-heading">
+          <p class="eyebrow">TU COLECCION</p>
+          <h1>Biblioteca</h1>
+          <p class="heading-description">Elige una cancion para ver sus datos en el reproductor.</p>
+        </div>
+
+        <div class="album-grid">
+          <article class="album-card">
+            <div class="library-cover cover-love-you" role="img" aria-label="Portada del album I Love You"></div>
+            <div class="album-heading"><h2>I Love You</h2><span>2013</span></div>
+            <p class="album-artist">The Neighbourhood</p>
+            <label class="track-option" for="sweater-weather">
+              <span class="track-number">01</span><span>Sweater Weather</span><span class="select-mark">+</span>
+            </label>
+          </article>
+
+          <article class="album-card">
+            <div class="library-cover cover-thriller" role="img" aria-label="Portada del Album Thriller"></div>
+            <div class="album-heading"><h2>Thriller</h2><span>1982</span></div>
+            <p class="album-artist">Michael Jackson</p>
+            <label class="track-option" for="billie-jean">
+              <span class="track-number">01</span><span>Billie Jean</span><span class="select-mark">+</span>
+            </label>
+          </article>
+
+          <article class="album-card">
+            <div class="library-cover cover-bad" role="img" aria-label="Portada del Album Bad"></div>
+            <div class="album-heading"><h2>Bad</h2><span>1987</span></div>
+            <p class="album-artist">Michael Jackson</p>
+            <label class="track-option" for="smooth-criminal">
+              <span class="track-number">01</span><span>Smooth Criminal</span><span class="select-mark">+</span>
+            </label>
+          </article>
+
+          <article class="album-card">
+            <div class="library-cover cover-dangerous" role="img" aria-label="Portada del Album Dangerous"></div>
+            <div class="album-heading"><h2>Dangerous</h2><span>1991</span></div>
+            <p class="album-artist">Michael Jackson</p>
+            <label class="track-option" for="black-or-white">
+              <span class="track-number">01</span><span>Black or White</span><span class="select-mark">+</span>
+            </label>
+          </article>
+        </div>
+
+        <label class="back-link" for="screen-player"><span aria-hidden="true"></span> Volver al reproductor</label>
+      </section>
+
+      <section class="screen playlist-screen" aria-label="Listas de reproduccion">
+        <div class="screen-heading">
+          <p class="eyebrow">ORGANIZA TU MUSICA</p>
+          <h1>Listas de reproduccion</h1>
+          <p class="heading-description">Crea una lista o prepara una que ya tengas.</p>
+        </div>
+
+        <div class="playlist-layout">
+          <aside class="playlist-collection">
+            <div class="collection-heading">
+              <h2>Mis listas</h2>
+              <span>2</span>
+            </div>
+            <div class="playlist-item playlist-item-selected">
+              <span class="playlist-icon" aria-hidden="true"></span>
+              <span><strong>Favoritas</strong><small>2 canciones</small></span>
+            </div>
+            <div class="playlist-item">
+              <span class="playlist-icon playlist-icon-muted" aria-hidden="true"></span>
+              <span><strong>Para escuchar</strong><small>1 cancion</small></span>
+            </div>
+            <button class="new-playlist-button" type="button">+ Crear lista</button>
+          </aside>
+
+          <form class="playlist-editor">
+            <div class="editor-heading">
+              <div>
+                <p class="eyebrow">EDITOR DE LISTA</p>
+                <h2>Nueva lista</h2>
+              </div>
+              <span class="editor-count">03 canciones</span>
+            </div>
+
+            <label class="field-label" for="playlist-name">Nombre de la lista</label>
+            <input class="playlist-name" id="playlist-name" name="playlist-name" type="text" placeholder="Ej. Musica para el viaje">
+
+            <p class="field-label song-field-label">Agregar canciones</p>
+            <label class="playlist-song">
+              <input type="checkbox" name="playlist-song" checked>
+              <span class="playlist-song-name"><strong>Sweater Weather</strong><small>The Neighbourhood , I Love You</small></span>
+            </label>
+            <label class="playlist-song">
+              <input type="checkbox" name="playlist-song">
+              <span class="playlist-song-name"><strong>Billie Jean</strong><small>Michael Jackson , Thriller</small></span>
+            </label>
+            <label class="playlist-song">
+              <input type="checkbox" name="playlist-song" checked>
+              <span class="playlist-song-name"><strong>Smooth Criminal</strong><small>Michael Jackson , Bad</small></span>
+            </label>
+            <label class="playlist-song">
+              <input type="checkbox" name="playlist-song">
+              <span class="playlist-song-name"><strong>Black or White</strong><small>Michael Jackson , Dangerous</small></span>
+            </label>
+
+            <div class="editor-actions">
+              <button class="cancel-button" type="reset">Limpiar</button>
+              <button class="save-button" type="button">Guardar lista</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen account-screen" aria-label="Cuenta de usuario">
+        <div class="screen-heading">
+          <p class="eyebrow">TU PERFIL</p>
+          <h1>Cuenta</h1>
+          <p class="heading-description">Inicia sesion o crea una cuenta para mostrar tu nombre.</p>
+        </div>
+
+        <div class="account-layout">
+          <section class="user-card" aria-label="Usuario actual">
+            <span class="user-avatar">I</span>
+            <p class="eyebrow">USUARIO ACTUAL</p>
+            <h2>Invitado</h2>
+            <p class="user-status">Sin iniciar sesion</p>
+          </section>
+
+          <section class="account-card" aria-label="Acceso a la cuenta">
+            <input class="account-choice" type="radio" name="account-mode" id="account-login" checked>
+            <input class="account-choice" type="radio" name="account-mode" id="account-register">
+
+            <div class="account-tabs">
+              <label for="account-login">Iniciar sesion</label>
+              <label for="account-register">Registrarse</label>
+            </div>
+
+            <form class="account-form login-form">
+              <h2>Bienvenido</h2>
+              <p>Ingresa tus datos para continuar.</p>
+              <label class="field-label" for="login-name">Nombre de usuario</label>
+              <input class="account-input" id="login-name" type="text" autocomplete="username" placeholder="Tu nombre">
+              <label class="field-label" for="login-password">Contraseña</label>
+              <input class="account-input" id="login-password" type="password" autocomplete="current-password" placeholder="Tu contraseña">
+              <button class="save-button account-submit" type="button">Iniciar sesion</button>
+            </form>
+
+            <form class="account-form register-form">
+              <h2>Crear cuenta</h2>
+              <p>Completa tus datos para registrarte.</p>
+              <label class="field-label" for="register-name">Nombre de usuario</label>
+              <input class="account-input" id="register-name" type="text" autocomplete="username" placeholder="Elige un nombre">
+              <label class="field-label" for="register-password">Contraseña</label>
+              <input class="account-input" id="register-password" type="password" autocomplete="new-password" placeholder="Crea una contraseña">
+              <button class="save-button account-submit" type="button">Registrarse</button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </div>
   </main>
 </body>
 </html>
