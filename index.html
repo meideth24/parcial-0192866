@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor de musica</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="page">
+    <span class="page-number page-number--left" aria-hidden="true">06</span>
+    <span class="page-number page-number--right" aria-hidden="true">07</span>
+
+    <section class="player" aria-label="Reproductor de musica">
+      <div class="record" aria-hidden="true">
+        <div class="record-label"><span></span></div>
+      </div>
+
+      <div class="player-body">
+        <p class="now-playing">
+          <span class="equalizer" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span>NOW SPINNING</span>
+        </p>
+
+        <div class="track">
+          <h1>Nombre de la cancion</h1>
+          <p class="track-info">Artista album Año</p>
+        </div>
+
+        <div class="timeline" aria-label="Progreso de reproduccion">
+          <div class="progress" aria-hidden="true">
+            <span class="progress-knob"></span>
+          </div>
+          <div class="times">
+            <span>0:00</span>
+            <span>0:00</span>
+          </div>
+        </div>
+
+        <div class="controls" role="group" aria-label="Controles del reproductor">
+          <button class="skip" type="button" aria-label="Cancion anterior">
+            <span class="previous-icon" aria-hidden="true"></span>
+          </button>
+          <button class="play" type="button" aria-label="Reproducir">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <button class="skip" type="button" aria-label="Cancion siguiente">
+            <span class="next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
