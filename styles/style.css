@@ -33,6 +33,7 @@ body {
 .sidebar {
   position: sticky;
   top: 0;
+  z-index: 1;
   display: flex;
   height: 100vh;
   min-height: 520px;
@@ -40,6 +41,7 @@ body {
   padding: 32px 20px 22px;
   background: #20232d;
   color: #f6f7fb;
+  box-shadow: 8px 0 24px rgb(32 35 45 / 8%);
 }
 
 .brand {
@@ -78,6 +80,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: flex;
   min-height: 46px;
   align-items: center;
@@ -201,24 +204,59 @@ body {
   color: #7eddf0;
 }
 
+#screen-player:checked ~ .sidebar label[for="screen-player"]::before,
+#screen-library:checked ~ .sidebar label[for="screen-library"]::before,
+#screen-playlists:checked ~ .sidebar label[for="screen-playlists"]::before,
+#screen-account:checked ~ .sidebar label[for="screen-account"]::before {
+  position: absolute;
+  top: 11px;
+  left: -1px;
+  width: 3px;
+  height: 22px;
+  border-radius: 0 3px 3px 0;
+  background: #7eddf0;
+  content: "";
+}
+
+#screen-player:focus-visible ~ .sidebar label[for="screen-player"],
+#screen-library:focus-visible ~ .sidebar label[for="screen-library"],
+#screen-playlists:focus-visible ~ .sidebar label[for="screen-playlists"],
+#screen-account:focus-visible ~ .sidebar label[for="screen-account"] {
+  outline: 2px solid #7eddf0;
+  outline-offset: 2px;
+}
+
 #sweater-weather:checked ~ .content::before {
   background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), url("../assets/sweater%20weather-i%20love%20you-2013.jpg");
 }
 
 #billie-jean:checked ~ .content::before {
-  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), url("../assets/thriller.jpg"), linear-gradient(135deg, #596269, #17191e 58%, #d9dedb);
+  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), linear-gradient(135deg, #596269, #17191e 58%, #d9dedb);
 }
 
 #smooth-criminal:checked ~ .content::before {
-  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), url("../assets/bad.jpg"), linear-gradient(135deg, #b48d69, #282220 58%, #101114);
+  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), linear-gradient(135deg, #b48d69, #282220 58%, #101114);
 }
 
 #black-or-white:checked ~ .content::before {
-  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), url("../assets/dangerous.jpg"), linear-gradient(135deg, #d1a52c, #312819 58%, #131315);
+  background-image: linear-gradient(rgb(233 235 243 / 82%), rgb(233 235 243 / 88%)), linear-gradient(135deg, #d1a52c, #312819 58%, #131315);
 }
 
 .screen-heading {
+  position: relative;
   margin-bottom: 20px;
+  padding-bottom: 14px;
+}
+
+.screen-heading::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34px;
+  height: 2px;
+  border-radius: 2px;
+  background: #8acbd5;
+  content: "";
 }
 
 .eyebrow {
@@ -277,7 +315,7 @@ body {
 }
 
 .cover-thriller {
-  background-image: url("../assets/thriller.jpg"), linear-gradient(135deg, #596269, #17191e 58%, #d9dedb);
+  background-image: linear-gradient(135deg, #596269, #17191e 58%, #d9dedb);
 }
 
 .cover-love-you {
@@ -285,11 +323,11 @@ body {
 }
 
 .cover-bad {
-  background-image: url("../assets/bad.jpg"), linear-gradient(135deg, #b48d69, #282220 58%, #101114);
+  background-image: linear-gradient(135deg, #b48d69, #282220 58%, #101114);
 }
 
 .cover-dangerous {
-  background-image: url("../assets/dangerous.jpg"), linear-gradient(135deg, #d1a52c, #312819 58%, #131315);
+  background-image: linear-gradient(135deg, #d1a52c, #312819 58%, #131315);
 }
 
 .record::after {
@@ -557,8 +595,10 @@ button {
 .library-cover {
   width: 100%;
   aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 55%);
   border-radius: 12px;
   background-color: #d5d8e1;
+  box-shadow: inset 0 0 0 1px rgb(25 26 32 / 4%);
 }
 
 .album-heading {
@@ -781,6 +821,12 @@ button {
   accent-color: #667b91;
 }
 
+.playlist-song:focus-within {
+  border-radius: 8px;
+  outline: 2px solid #b7dce2;
+  outline-offset: 1px;
+}
+
 .playlist-song-name strong {
   font-size: 11px;
   font-weight: 600;
@@ -881,6 +927,15 @@ button {
   font-size: 12px;
   text-align: center;
   cursor: pointer;
+}
+
+#account-login:focus-visible ~ .account-tabs label[for="account-login"],
+#account-register:focus-visible ~ .account-tabs label[for="account-register"],
+#screen-library:focus-visible ~ .content .library-link,
+#screen-player:focus-visible ~ .content .back-link,
+button:focus-visible {
+  outline: 2px solid #7eabb6;
+  outline-offset: 3px;
 }
 
 #account-login:checked ~ .account-tabs label[for="account-login"],
