@@ -20,26 +20,38 @@
 
     <aside class="sidebar">
       <a class="brand" href="#inicio" aria-label="Inicio del reproductor">
-        <span class="brand-mark"></span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"></path>
+          </svg>
+        </span>
         <span>SONORA</span>
       </a>
 
       <p class="menu-label">MENU</p>
       <nav class="side-navigation" aria-label="Secciones">
         <label class="navigation-link" for="screen-player">
-          <span class="navigation-number">01</span>
+          <span class="navigation-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"></path></svg>
+          </span>
           <span>Reproductor</span>
         </label>
         <label class="navigation-link" for="screen-library">
-          <span class="navigation-number">02</span>
+          <span class="navigation-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+          </span>
           <span>Biblioteca</span>
         </label>
         <label class="navigation-link" for="screen-playlists">
-          <span class="navigation-number">03</span>
+          <span class="navigation-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6h12M4 12h12M4 18h8M19 15v6M16 18h6"></path></svg>
+          </span>
           <span>Listas</span>
         </label>
         <label class="navigation-link" for="screen-account">
-          <span class="navigation-number">04</span>
+          <span class="navigation-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"></circle><path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path></svg>
+          </span>
           <span>Mi cuenta</span>
         </label>
       </nav>
@@ -122,43 +134,75 @@
         <div class="screen-heading">
           <p class="eyebrow">TU COLECCION</p>
           <h1>Biblioteca</h1>
-          <p class="heading-description">Elige una cancion para ver sus datos en el reproductor.</p>
+          <p class="heading-description">Explora los albumes y selecciona una cancion para ver sus detalles.</p>
         </div>
 
         <div class="album-grid">
           <article class="album-card">
             <div class="library-cover cover-love-you" role="img" aria-label="Portada del album I Love You"></div>
-            <div class="album-heading"><h2>I Love You</h2><span>2013</span></div>
-            <p class="album-artist">The Neighbourhood</p>
+            <div class="album-heading">
+              <h2>I Love You</h2>
+              <span class="album-year">2013</span>
+            </div>
+            <div class="album-meta">
+              <p class="album-artist">The Neighbourhood</p>
+              <span class="album-count">1 cancionn</span>
+            </div>
             <label class="track-option" for="sweater-weather">
-              <span class="track-number">01</span><span>Sweater Weather</span><span class="select-mark">+</span>
+              <span class="track-number">01</span>
+              <span class="track-title">Sweater Weather</span>
+              <span class="select-mark" aria-hidden="true"></span>
             </label>
           </article>
 
           <article class="album-card">
-            <div class="library-cover cover-thriller" role="img" aria-label="Portada del Album Thriller"></div>
-            <div class="album-heading"><h2>Thriller</h2><span>1982</span></div>
-            <p class="album-artist">Michael Jackson</p>
+            <div class="library-cover cover-thriller" role="img" aria-label="Portada del album Thriller"></div>
+            <div class="album-heading">
+              <h2>Thriller</h2>
+              <span class="album-year">1982</span>
+            </div>
+            <div class="album-meta">
+              <p class="album-artist">Michael Jackson</p>
+              <span class="album-count">1 cancion</span>
+            </div>
             <label class="track-option" for="billie-jean">
-              <span class="track-number">01</span><span>Billie Jean</span><span class="select-mark">+</span>
+              <span class="track-number">01</span>
+              <span class="track-title">Billie Jean</span>
+              <span class="select-mark" aria-hidden="true"></span>
             </label>
           </article>
 
           <article class="album-card">
-            <div class="library-cover cover-bad" role="img" aria-label="Portada del Album Bad"></div>
-            <div class="album-heading"><h2>Bad</h2><span>1987</span></div>
-            <p class="album-artist">Michael Jackson</p>
+            <div class="library-cover cover-bad" role="img" aria-label="Portada del album Bad"></div>
+            <div class="album-heading">
+              <h2>Bad</h2>
+              <span class="album-year">1987</span>
+            </div>
+            <div class="album-meta">
+              <p class="album-artist">Michael Jackson</p>
+              <span class="album-count">1 cancion</span>
+            </div>
             <label class="track-option" for="smooth-criminal">
-              <span class="track-number">01</span><span>Smooth Criminal</span><span class="select-mark">+</span>
+              <span class="track-number">01</span>
+              <span class="track-title">Smooth Criminal</span>
+              <span class="select-mark" aria-hidden="true"></span>
             </label>
           </article>
 
           <article class="album-card">
-            <div class="library-cover cover-dangerous" role="img" aria-label="Portada del Album Dangerous"></div>
-            <div class="album-heading"><h2>Dangerous</h2><span>1991</span></div>
-            <p class="album-artist">Michael Jackson</p>
+            <div class="library-cover cover-dangerous" role="img" aria-label="Portada del album Dangerous"></div>
+            <div class="album-heading">
+              <h2>Dangerous</h2>
+              <span class="album-year">1991</span>
+            </div>
+            <div class="album-meta">
+              <p class="album-artist">Michael Jackson</p>
+              <span class="album-count">1 cancion</span>
+            </div>
             <label class="track-option" for="black-or-white">
-              <span class="track-number">01</span><span>Black or White</span><span class="select-mark">+</span>
+              <span class="track-number">01</span>
+              <span class="track-title">Black or White</span>
+              <span class="select-mark" aria-hidden="true"></span>
             </label>
           </article>
         </div>
@@ -177,17 +221,17 @@
           <aside class="playlist-collection">
             <div class="collection-heading">
               <h2>Mis listas</h2>
-              <span>2</span>
+              <span class="collection-count">2 listas</span>
             </div>
-            <div class="playlist-item playlist-item-selected">
-              <span class="playlist-icon" aria-hidden="true"></span>
+            <div class="playlist-item playlist-item-selected" aria-current="true">
+              <span class="playlist-icon cover-love-you" role="img" aria-label="Portada de Favoritas"></span>
               <span><strong>Favoritas</strong><small>2 canciones</small></span>
             </div>
             <div class="playlist-item">
-              <span class="playlist-icon playlist-icon-muted" aria-hidden="true"></span>
+              <span class="playlist-icon cover-wiped-out" role="img" aria-label="Portada de Para escuchar"></span>
               <span><strong>Para escuchar</strong><small>1 cancion</small></span>
             </div>
-            <button class="new-playlist-button" type="button">+ Crear lista</button>
+            <button class="new-playlist-button" type="button"><span class="button-plus" aria-hidden="true">+</span>Crear lista</button>
           </aside>
 
           <form class="playlist-editor">
@@ -196,7 +240,13 @@
                 <p class="eyebrow">EDITOR DE LISTA</p>
                 <h2>Nueva lista</h2>
               </div>
-              <span class="editor-count">2 seleccionadas</span>
+              <span class="editor-count">4 canciones disponibles</span>
+            </div>
+
+            <div class="empty-state">
+              <span class="empty-state-icon" aria-hidden="true"></span>
+              <strong>Esta lista esta vacia</strong>
+              <span>Selecciona canciones para empezar.</span>
             </div>
 
             <label class="field-label" for="playlist-name">Nombre de la lista</label>
@@ -204,7 +254,7 @@
 
             <p class="field-label song-field-label">Agregar canciones</p>
             <label class="playlist-song">
-              <input type="checkbox" name="playlist-song" checked>
+              <input type="checkbox" name="playlist-song">
               <span class="playlist-song-name"><strong>Sweater Weather</strong><small>The Neighbourhood , I Love You</small></span>
             </label>
             <label class="playlist-song">
@@ -212,7 +262,7 @@
               <span class="playlist-song-name"><strong>Billie Jean</strong><small>Michael Jackson , Thriller</small></span>
             </label>
             <label class="playlist-song">
-              <input type="checkbox" name="playlist-song" checked>
+              <input type="checkbox" name="playlist-song">
               <span class="playlist-song-name"><strong>Smooth Criminal</strong><small>Michael Jackson , Bad</small></span>
             </label>
             <label class="playlist-song">
