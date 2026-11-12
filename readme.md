@@ -26,3 +26,5 @@ La navegación entre vistas, la selección de canciones y el cambio entre formul
 Las imágenes se cargan desde `assets/`. Las portadas de *I Love You*, *Thriller* y *Bad* se usan en la biblioteca; *I Love You* y *Wiped Out* también aparecen como fondos de listas. *Dangerous* usa un degradado porque no hay una portada correspondiente en la carpeta.
 
 Para usar otra portada, guarda la imagen en `assets/` y actualiza su ruta en `styles/style.css`.
+
+https://www.figma.com/riffs/80915f9f-ccec-4272-b955-127fbcd933b1
